@@ -1,0 +1,43 @@
+JSP SQL
+
+-- 테이블 및 sequence 만들기
+
+CREATE TABLE FB_Member(
+    m_no NUMBER(8), 
+    m_id VARCHAR2(20),
+    m_pw VARCHAR2(20),
+    m_nick VARCHAR2(40),
+    m_phone VARCHAR2(50),
+    m_joindate DATE
+);
+
+CREATE SEQUENCE FB_Member_seq;
+
+INSERT INTO FB_Member VALUES(FB_Member_seq.nextval, 's111', 'pw1111', '한조111', '010-111', SYSDATE);
+-- exception이 발생되도 1이 증가.
+
+SELECT * FROM FB_Member ORDER BY M_NO ASC;
+
+SELECT * FROM FB_Member WHERE m_id = 's001' AND m_pw = '1111';
+--select를 해서 로그인 창에 입력한 정보와 같은지 확인한다
+
+CREATE TABLE FB_Board(
+    b_no NUMBER(8),
+    m_no NUMBER(8), 
+--  Foreign Key
+    b_title VARCHAR2(400),
+    b_content VARCHAR2(1000),
+    b_writedate DATE
+);
+-- 다음 예제에는 count 세는 것도 다 넣을 것임
+CREATE SEQUENCE FB_Board_seq;
+
+INSERT INTO FB_Board VALUES(FB_Board_seq.nextval,1,'제목입니다','내용입니다',SYSDATE);
+-- 1: 멤버번호
+
+
+SELECT * FROM FB_Board;
+
+SELECT * FROM FB_Board,FB_Member WHERE FB_Board.m_no = FB_Member.m_no ORDER BY FB_Board.b_no DESC;
+
+SELECT * FROM FB_Member WHERE m_id = 's001' or 1=1; --' AND m_pw = '1111'

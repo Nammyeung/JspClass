@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JSPMVC_0420</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+ <!-- 서블릿 등록 -->
+ <servlet>
+   <servlet-name>ControllerUsingURI</servlet-name>
+   <servlet-class>com.js.freeboard.controller</servlet-class>
+   <load-on-startup>1</load-on-startup> <!-- 가동을 할 때 인스턴스를 생성 -->
+ </servlet>
+ 
+ <!-- 서블릿 매핑 -->
+ <!-- 이 부분을 이용해 참조하겠다. -->
+ <servlet_mapping>
+   <servlet-name>ControllerUsingURI</servlet-name>
+   <url-pattern>*.do</url-pattern> <!-- *.do가 날라오면 반응함 -->
+ </servlet_mapping>
+ 
+</web-app>

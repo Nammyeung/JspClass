@@ -21,7 +21,6 @@ public class CommandFactory {
 		commandMap.put("/board_view.do", new BoardViewHandler());
 		commandMap.put("/board_write.do", new BoardWriteHandler());
 		commandMap.put("/write_process.do", new WriteContentProcessHandler());
-		commandMap.put("/write_process.do", new WriteContentProcessHandler());
 		
 		
 		

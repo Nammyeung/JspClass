@@ -1,8 +1,9 @@
 package com.ja.rubato.controller.model;
 
-import java.util.*;
 import java.sql.*;
-import com.ja.freeboard.vo.*;
+import java.util.ArrayList;
+
+import com.ja.rubato.controller.*;
 import com.ja.rubato.controller.vo.BoardVo;
 
 public class BoardDao {
@@ -190,9 +191,9 @@ public class BoardDao {
 	}
 	
 	public void insert(int memberNo, String title, String content) {
-String query = "INSERT INTO fb_board VALUES(fb_board_seq.nextval, ?, ?, ? , SYSDATE)";
-		
-		
+
+		String query = "INSERT INTO fb_board VALUES(fb_board_seq.nextval, ?, ?, ? , SYSDATE)";
+				
 		Connection conn = null;
 		PreparedStatement pstm = null;
 		

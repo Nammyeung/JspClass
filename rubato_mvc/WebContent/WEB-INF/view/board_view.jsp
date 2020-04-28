@@ -74,14 +74,14 @@ ${contentDataVo.boardVo.b_content }<br> --%>
   <h2 id="board_title">자유 게시판 </h2>
   <div id="view_title_box"> 
     <span>${contentDataVo.boardVo.b_title }</span>
-    <span id="info">${contentDataVo.memberVo.m_nick } | 조회 : 208 | ${data.boardVo.b_writedate } (09:20)</span>
+    <span id="info">            ${contentDataVo.memberVo.m_nick } | 조회 : 208 | ${data.boardVo.b_writedate } (09:20)</span>
   </div>	
   <p id="view_content">
     ${contentDataVo.boardVo.b_content }
   </p>		
   <div id="comment_box">
     <img id="title_comment" src="img/title_comment.gif">
-    <textarea></textarea>
+    <textarea>${contentDataVo.commentVo.c_comment }</textarea>
     <img id="ok_ripple" src="img/ok_ripple.gif">
   </div>
   <div id="buttons">

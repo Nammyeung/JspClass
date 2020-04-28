@@ -128,13 +128,13 @@
       	  <c:forEach items = "${contentList }" var = "data">
           <li>
             <div class="subject">
-            <a href = "./board_view.do?b_no=${data.boardVo.b_no }">${data.boardVo.b_title }</a>
+            <a href = "./board_list.do?b_no=${data.boardVo.b_no }">${data.boardVo.b_title }</a>
             </div>
             <div class="date">${data.boardVo.b_writedate }</div>
             <div class="clear"></div>		
           </li>
           </c:forEach>
-          <li>
+          <!-- <li>
             <div class="subject">까스통님의 선물인 보드카...</div>
             <div class="date">2017-09-20</div>
             <div class="clear"></div>	
@@ -148,7 +148,7 @@
             <div class="subject">까스통님의 선물인 보드카...</div>
             <div class="date">2017-09-20</div>
             <div class="clear"></div>	
-          </li>								
+          </li>	 -->							
         </ul>							
       </div>
     </article>			

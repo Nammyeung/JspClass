@@ -1,9 +1,12 @@
 package com.ja.rubato.controller.model;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.*;
 
-import com.ja.freeboard.vo.MemberVo;
+import com.ja.rubato.controller.vo.MemberVo;;
 
 // ValueObject
 // DTO = VO : 데이터의 형태
@@ -162,6 +165,7 @@ public class MemberDao {
 	}
 	
 	public com.ja.rubato.controller.vo.MemberVo selectByNo(int no) {
+		
 		com.ja.rubato.controller.vo.MemberVo memberVo = null;
 		
 		String query = "SELECT * FROM fb_member WHERE m_no = ?";

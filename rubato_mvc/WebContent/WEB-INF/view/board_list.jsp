@@ -120,7 +120,7 @@
         <td class="col5">15</td> --%>
          <td class="col1">${data.boardVo.b_no }</td>
         <td class="col2">
-          <a href= "./board_list.do?b_no=${data.boardVo.b_no }">${data.boardVo.b_title }</a>
+          <a href= "./board_view.do?b_no=${data.boardVo.b_no }">${data.boardVo.b_title }</a>
         </td>
         <td class="col3">${data.memberVo.m_nick }</td>
         <td class="col4">${data.boardVo.b_writedate }</td>

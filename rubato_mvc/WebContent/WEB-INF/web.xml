@@ -18,5 +18,5 @@
     <servlet-mapping>
     <servlet-name>ControllerUsingURI</servlet-name>
   <url-pattern>*.do</url-pattern>
-  </servlet-mapping> 
+  </servlet-mapping>
 </web-app>
